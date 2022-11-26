@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    @apply min-h-full w-full bg-[#F6EDD9] ;
+    font-family: 'Silkscreen', cursive;
+}
+
+.cell{
+    @apply lg:w-5 lg:h-5 w-2.5 h-2.5
+}
+
+.cell__active{
+    @apply bg-[#4AAF52]
+}
+
+.cell__inactive{
+    @apply bg-[#779A75]/50
+}
+
+.container{
+    @apply flex justify-center w-full h-full max-w-screen-lg md:mx-auto px-4
+}
+
+.content{
+    @apply flex flex-col
+}
+
+.title{
+    @apply text-4xl lg:text-6xl mt-[20px] text-center text-[#779A75]
+}
+
+.button-group{
+    @apply flex flex-col lg:grid lg:grid-cols-12 lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 mt-10 lg:mt-[10%] mx-auto text-xl
+}
+
+.button-group__button{
+    @apply ease-in duration-300 bg-transparent border border-[#779A75] text-[#779A75] hover:bg-[#779A75] hover:text-white text-center py-2 px-4 rounded disabled:bg-gray-200/50 disabled:text-gray-400  disabled:border-gray-400
+}
+
+.button-group__button__small{
+    @apply col-span-2
+}
+
+.button-group__button__medium{
+    @apply col-span-3
+}
+
+.button-group__button__large{
+    @apply col-span-4
+}
+
+.field{
+    @apply bg-[#F1FDEF]/75 rounded mt-8 mb-4 p-2 grid gap-0.5 mx-auto
+}
+
+.field__25{
+    @apply grid-cols-[repeat(25_,minmax(0,_1fr))]
+}
